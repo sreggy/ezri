@@ -36,7 +36,7 @@
 // If you want, you can define WiFi settings globally in Eclipse Environment Variables
 #ifndef WIFI_SSID
 #define WIFI_SSID "ILUVATAR" // Put your SSID and password here
-#define WIFI_PWD "muad$dib"
+#define WIFI_PWD "PASSWORD"
 #define MQTT_URL "mqtt://192.168.0.21:1883"
 #endif
 

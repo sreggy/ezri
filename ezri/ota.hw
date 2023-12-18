@@ -1,0 +1,14 @@
+{
+	"base_config": "spiffs-two-roms",
+	"partitions": {
+		"rom0": {
+			"subtype": "ota_0"
+		},
+		"rom1": {
+			"subtype": "ota_1"
+		},
+		"spiffs0": {
+			"size": "1024K"
+		}
+	}
+}

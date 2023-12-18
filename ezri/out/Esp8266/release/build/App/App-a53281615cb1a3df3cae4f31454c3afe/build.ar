@@ -1,0 +1,21 @@
+CREATE clib-App-a53281615cb1a3df3cae4f31454c3afe.a
+ADDMOD Users/a020900/develop/git/ez-lib/src/Ezri.o
+ADDMOD Users/a020900/develop/git/ez-lib/src/commandCfg.o
+ADDMOD Users/a020900/develop/git/ez-lib/src/commandLib.o
+ADDMOD Users/a020900/develop/git/ez-lib/src/commandOta.o
+ADDMOD Users/a020900/develop/git/ez-lib/src/commandShow.o
+ADDMOD Users/a020900/develop/git/ez-lib/src/libCommander.o
+ADDMOD Users/a020900/develop/git/ez-lib/src/libFTP.o
+ADDMOD Users/a020900/develop/git/ez-lib/src/libHelo.o
+ADDMOD Users/a020900/develop/git/ez-lib/src/libMqtt.o
+ADDMOD Users/a020900/develop/git/ez-lib/src/libOta.o
+ADDMOD Users/a020900/develop/git/ez-lib/src/libTelnet.o
+ADDMOD Users/a020900/develop/git/ez-lib/src/libWeb.o
+ADDMOD Users/a020900/develop/git/ez-lib/src/libWifi.o
+ADDMOD app/application.o
+ADDMOD Components/rboot/rboot/appcode/rboot-api.o
+ADDMOD Components/rboot/rboot/appcode/rboot-bigflash.o
+ADDMOD Arch/Esp8266/Components/gdbstub/appcode/gdbstub-entry.o
+ADDMOD Arch/Esp8266/Components/gdbstub/appcode/gdb_hooks.o
+SAVE
+END

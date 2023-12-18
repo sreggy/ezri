@@ -1,0 +1,2 @@
+#define __ROM_VERSION__ "0000116"
+#define __STAMP__ "20231215-121909"

@@ -1,0 +1,62 @@
+# Automatically generated file. Do not edit.
+
+APP_CFLAGS= -DCOM_SPEED_SERIAL=$(COM_SPEED_SERIAL) -DSERIAL_BAUD_RATE=$(COM_SPEED_SERIAL) -DRBOOT_INTEGRATION -DBOOT_BIG_FLASH -DGDBSTUB_GDB_PATCHED=0
+APP_LIBDIR=out/Esp8266/release/lib
+AR=/Users/a020900/sming/esp-quick-toolchain/xtensa-lx106-elf/bin/xtensa-lx106-elf-ar
+ARCH_BASE=/Users/a020900/sming/Sming/Sming/Arch/Esp8266
+AS=/Users/a020900/sming/esp-quick-toolchain/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc
+AWK=POSIXLY_CORRECT= awk
+BLANK_BIN=/Users/a020900/sming/Sming/Sming/Components/Storage/blank.bin
+BUILD_BASE=$(OUT_BASE)/build
+CC=/Users/a020900/sming/esp-quick-toolchain/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc
+CLANG_FORMAT=clang-format
+CMAKE=cmake
+COM_SPEED_GDB=$(COM_SPEED_SERIAL)
+CXX=/Users/a020900/sming/esp-quick-toolchain/xtensa-lx106-elf/bin/xtensa-lx106-elf-g++
+ESPTOOL=/Users/a020900/sming/Sming/Sming/Components/esptool/esptool/esptool.py
+ESPTOOL2=/Users/a020900/sming/Sming/Sming/out/Esp8266/release/tools/esptool2
+ESP_HOME=/Users/a020900/sming/esp-quick-toolchain
+FLASH_INIT_DATA=$(SDK_BASE)/bin/esp_init_data_default.bin
+FLASH_INIT_DATA_VCC=$(SDK_BASE)/bin/esp_init_data_vdd_default.bin
+FSBUILD=python3 /Users/a020900/sming/Sming/Sming/Components/IFS/tools/fsbuild/fsbuild.py 
+FW_BASE=$(OUT_BASE)/firmware
+GCC_VERSION=10.2.0
+GDB=/Users/a020900/sming/esp-quick-toolchain/xtensa-lx106-elf/bin/xtensa-lx106-elf-gdb
+GDBSTUB_DIR=/Users/a020900/sming/Sming/Sming/Arch/Esp8266/Components/gdbstub
+GIT=git
+GLOBAL_CFLAGS=-DSMING_ARCH=$(SMING_ARCH) -DSMING_SOC=$(SMING_SOC) -DPROJECT_DIR=\"$(PROJECT_DIR)\" -DSMING_HOME=\"$(SMING_HOME)\" $(USER_CFLAGS) -D$(SMING_SOC_VAR)=1 -DDEBUG_PRINT_FILENAME_AND_LINE=$(DEBUG_PRINT_FILENAME_AND_LINE) -DCUST_FILE_BASE=$$$$(subst $$(SMING_HOME)/,,$$$$<) -DDEBUG_VERBOSE_LEVEL=$(DEBUG_VERBOSE_LEVEL) -DSTRING_OBJECT_SIZE=$(STRING_OBJECT_SIZE)  -DUSE_US_TIMER -DHTTP_SERVER_EXPOSE_NAME=$(HTTP_SERVER_EXPOSE_NAME) -DHTTP_SERVER_EXPOSE_VERSION=$(HTTP_SERVER_EXPOSE_VERSION)
+LD=/Users/a020900/sming/esp-quick-toolchain/xtensa-lx106-elf/bin/xtensa-lx106-elf-gcc
+LIBMAIN_COMMANDS=$(RBOOT_LIBMAIN_COMMANDS) $(APP_LIBMAIN_COMMANDS)
+NINJA=ninja
+NM=/Users/a020900/sming/esp-quick-toolchain/xtensa-lx106-elf/bin/xtensa-lx106-elf-nm
+OBJCOPY=/Users/a020900/sming/esp-quick-toolchain/xtensa-lx106-elf/bin/xtensa-lx106-elf-objcopy
+OBJDUMP=/Users/a020900/sming/esp-quick-toolchain/xtensa-lx106-elf/bin/xtensa-lx106-elf-objdump
+OS=
+OUT_BASE=out/Esp8266/release
+PROJECT_DIR=/Users/a020900/develop/git/ezri
+PROJECT_SOC=esp8266
+PYTHON=python3
+RBOOT_BIG_FLASH=1
+RBOOT_DIR=/Users/a020900/sming/Sming/Sming/Components/rboot
+RBOOT_ROM0_ADDR=0x00002000
+RBOOT_ROM1_ADDR=0x00102000
+RBOOT_ROM2_ADDR=
+RBOOT_ROM_0_BIN=out/Esp8266/release/firmware/rom0.bin
+RBOOT_ROM_1_BIN=
+RBOOT_TWO_ROMS=0
+SMING_ARCH=Esp8266
+SMING_ARCH_FULL=Esp8266
+SMING_CXX_STD=c++17
+SMING_C_STD=c11
+SMING_HOME=/Users/a020900/sming/Sming/Sming
+SMING_RELEASE=1
+SMING_SOC=esp8266
+SPIFF_BIN_OUT=out/Esp8266/release/firmware/spiff_rom.bin
+SPI_MODE=$(STORAGE_DEVICE_spiFlash_MODE)
+SPI_SIZE=$(STORAGE_DEVICE_spiFlash_SIZE)
+SPI_SPEED=$(STORAGE_DEVICE_spiFlash_SPEED)
+STRICT=0
+TARGET_OUT_0=out/Esp8266/release/build/app_0.out
+TOOLS_BASE=$(SMING_HOME)/$(OUT_BASE)/tools
+UNAME=Darwin
+USER_LIBDIR=$(SMING_HOME)/$(OUT_BASE)/lib

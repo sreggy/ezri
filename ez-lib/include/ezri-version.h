@@ -1,0 +1,2 @@
+#define __EZRI_VERSION__ "0000106"
+#define __EZRI_STAMP__ "20231214-164004"

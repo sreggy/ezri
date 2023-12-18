@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8" />
+
+<title>WebSocket Command Test</title>
+
+<script language="javascript" type="text/javascript">
+
+  var wsUri = "ws://"+ location.host +"/ws";
+  //  var wsUri = "ws://" + location.host + "/ws";
+  var output;
+
+  function init() {
+    output = document.getElementById("output");
+    testWebSocket();
+  }
+
+  function testWebSocket() {
+    websocket = new WebSocket(wsUri);
+    websocket.onopen = function (evt) { onOpen(evt) };
+    websocket.onclose = function (evt) { onClose(evt) };
+    websocket.onmessage = function (evt) { onMessage(evt) };
+    websocket.onerror = function (evt) { onError(evt) };
+  }
+
+  function addCommandReply(addString) {
+    document.getElementById("commandReply").innerHTML += "<pre>" + addString + "</pre>";
+  }
+
+  function onOpen(evt) {
+    addCommandReply('<span style="color: red;">CONNECTED </span>');
+    doSend("show ver");
+  }
+
+  function onClose(evt) {
+    addCommandReply('<span style="color: red;">DISCONNECTED </span>');
+  }
+
+  function onMessage(evt) {
+    addCommandReply('<span style="color: black;">' + evt.data + '</span>');
+  }
+
+  function onError(evt) {
+    addCommandReply('<span style="color: red;">ERROR:</span> ' + evt.data);
+  }
+
+  function doSend(message) {
+    addCommandReply('<span style="color: blue;">#</span> ' + message);
+    websocket.send(message);
+  }
+
+  function writeToScreen(message) {
+    var pre = document.createElement("p");
+    pre.style.wordWrap = "break-word";
+    pre.innerHTML = message;
+    output.appendChild(pre);
+  }
+
+  function connectBtn() {
+    testWebSocket();
+  }
+
+  function disConnectBtn() {
+    websocket.close();
+  }
+
+  function sendMessageBtn() {
+
+    doSend(document.getElementById("sendMessage").value);
+  }
+
+  function clearOutputBtn() {
+    document.getElementById("commandReply").innerHTML = "";
+  }
+
+// Initialize 
+  window.addEventListener("load", init, false);
+
+
+</script>
+
+<style>
+  .button {
+    border: none;
+    color: blue;
+    padding: 6px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .input {
+    border: 1px solid rgb(7, 7, 61);
+    color: rgb(133, 7, 7);
+    padding: 6px 1px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .output {
+    width: 100%;
+    height: 550px;
+    padding: 6px 1px;
+    overflow-y: scroll;
+    border: 1px solid black;
+    font-size: 12px;
+  }
+</style>
+<html>
+<span style="color: rgb(83, 4, 4);"><h2>Remote Command on device</h2></span>
+
+<button class="button" onclick="connectBtn()">Connect</button>
+<button class="button" onclick="disConnectBtn()">Disconnect</button>
+<br><br>
+
+<input class="input" id="sendMessage" size="40" value="show ver">
+<button class="button" onclick="sendMessageBtn()">Send</button>
+<br><br>
+
+<button class="button" onclick="clearOutputBtn()">Clear Output</button>
+<div class="output " id="commandReply">
+</div>
+
+<div id="output"></div>
+</html>

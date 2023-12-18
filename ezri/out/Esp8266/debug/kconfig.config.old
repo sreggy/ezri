@@ -1,0 +1,106 @@
+
+#
+# Sming
+#
+# SELECT_LOCALE_EN_US is not set
+SELECT_LOCALE_EN_GB=y
+# SELECT_LOCALE_EN_AU is not set
+# SELECT_LOCALE_FR_FR is not set
+# SELECT_LOCALE_DE_DE is not set
+LOCALE=44
+COM_SPEED=115200
+TASK_QUEUE_LENGTH=10
+STRING_OBJECT_SIZE=12
+# DISABLE_NETWORK is not set
+# end of Sming
+
+#
+# Debug
+#
+# SELECT_DEBUG_ERROR is not set
+# SELECT_DEBUG_WARN is not set
+# SELECT_DEBUG_INFO is not set
+SELECT_DEBUG_DEBUG=y
+DEBUG_VERBOSE_LEVEL=3
+# DEBUG_PRINT_FILENAME_AND_LINE is not set
+# ENABLE_GDB is not set
+# ENABLE_SPI_DEBUG is not set
+# ENABLE_TASK_COUNT is not set
+# end of Debug
+
+#
+# SPIFFS
+#
+SPIFF_FILEDESC_COUNT=7
+SPIFFS_OBJ_META_LEN=16
+SPIFF_FILES="files"
+# end of SPIFFS
+
+#
+# SPI Library
+#
+# SPISOFT_DELAY_VARIABLE is not set
+SPISOFT_DELAY_FIXED=0
+# end of SPI Library
+
+#
+# Terminal
+#
+COM_PORT="/dev/cu.usbserial-0001"
+COM_SPEED_SERIAL=115200
+COM_OPTS="--raw --encoding ascii --rts 0 --dtr 0"
+TERMINAL="$(PYTHON) -m serial.tools.miniterm $(COM_OPTS) $(COM_PORT) $(COM_SPEED_SERIAL)"
+KILL_TERM="pkill -9 -f \"$(COM_PORT) $(COM_SPEED_SERIAL)\" || exit 0"
+# end of Terminal
+
+#
+# Network
+#
+# DISABLE_WIFI is not set
+WIFI_SSID=""
+WIFI_PWD=""
+# ENABLE_WPS is not set
+# ENABLE_SMART_CONFIG is not set
+HTTP_SERVER_EXPOSE_NAME=y
+# HTTP_SERVER_EXPOSE_VERSION is not set
+ENABLE_CUSTOM_LWIP=1
+# end of Network
+
+#
+# Heap
+#
+# ENABLE_CUSTOM_HEAP is not set
+# end of Heap
+
+#
+# rBoot
+#
+# RBOOT_RTC_ENABLED is not set
+RBOOT_GPIO_DISABLED=y
+# RBOOT_GPIO_ENABLED is not set
+# RBOOT_GPIO_SKIP_ENABLED is not set
+# end of rBoot
+
+#
+# Drivers
+#
+USE_US_TIMER=y
+ENABLE_CUSTOM_PWM=y
+# end of Drivers
+
+#
+# esptool
+#
+COM_PORT_ESPTOOL="$(COM_PORT)"
+COM_SPEED_ESPTOOL="$(COM_SPEED)"
+# end of esptool
+
+#
+# SSL
+#
+SELECT_SSL_NONE=y
+# SELECT_SSL_DEFAULT is not set
+# SELECT_SSL_AXTLS is not set
+# SELECT_SSL_BEARSSL is not set
+ENABLE_SSL="0"
+# end of SSL
